@@ -1,0 +1,17 @@
+{
+  "name": "@akh-test/eslint-config",
+  "version": "0.0.3",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "eslint-config-next": "^12.0.8",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-react": "7.28.0",
+    "@typescript-eslint/eslint-plugin": "^4.15.1",
+    "@typescript-eslint/parser": "^4.15.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
