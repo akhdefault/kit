@@ -1,6 +1,6 @@
 {
   "name": "@akh-test/gen",
-  "version": "0.0.9-beta4",
+  "version": "0.0.9-beta15",
   "bin": {
     "config": "./dist/config/index.js",
     "component": "./dist/component/index.js"
@@ -8,6 +8,9 @@
   "publishConfig": {
     "access": "public"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",

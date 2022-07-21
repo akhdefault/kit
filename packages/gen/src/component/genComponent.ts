@@ -1,4 +1,4 @@
-import prompts, { PromptObject } from 'prompts';
+import prompts, { Answers, PromptObject } from 'prompts';
 import cpy from 'cpy';
 import path from 'path';
 import chalk from 'chalk';
@@ -46,19 +46,20 @@ const questions: PromptObject[] = [
       { title: 'Yes', value: true },
       { title: 'No', value: false },
     ],
+  },
 ];
 
 export default async function genComponent() {
   try {
     const res = await prompts(questions);
-    createComponent(res);
+    await createComponent(res);
   } catch (error) {
     console.error(error);
   }
 }
 
-async function createComponent({ ...options }) {
-  const name = toTitleCase(options?.name);
+async function createComponent(options: Answers<string>) {
+  const name = toTitleCase(options.name);
   const componentTemplatePath = path.join(
     __dirname,
     '/templates/Component.tsx'
@@ -85,21 +86,31 @@ async function createComponent({ ...options }) {
     );
   }
 
-  const generatedPath = `${destination}/${name}.tsx`;
-  const fileContent = (await fs.readFile(generatedPath)).toString();
-  await fs.writeFile(generatedPath, fileContent.replace(/Component/g, name));
+  const generatedComponentPath = `${destination}/${name}.tsx`;
+  const fileContent = (await fs.readFile(generatedComponentPath)).toString();
+  await fs.writeFile(
+    generatedComponentPath,
+    fileContent.replace(/Component/g, name)
+  );
 
-  // if (options.withStorybook) {
-  //   const storyTemplatePath = path.join(
-  //     __dirname,
-  //     '/templates/Component.stories.scss'
-  //   );
-  //   await cpy(storyTemplatePath, destination, {
-  //     rename: basename => basename.replace('Component', name),
-  //   });
-  //   const storyFileContent = (await fs.readFile(generatedPath)).toString();
-  //   await fs.writeFile(generatedPath, storyFileContent.replace(/Component/g, name));
-  // }
+  if (options.withStorybook) {
+    const storyTemplatePath = path.join(
+      __dirname,
+      '/templates/Component.stories.tsx'
+    );
+    await cpy(storyTemplatePath, destination, {
+      rename: basename => basename.replace('Component', name),
+    });
 
-  console.log(chalk.green(`Generated a component at ${generatedPath}`));
+    const generatedStoryPath = `${destination}/${name}.stories.tsx`;
+    const storyFileContent = (await fs.readFile(generatedStoryPath)).toString();
+    await fs.writeFile(
+      generatedStoryPath,
+      storyFileContent.replace(/Component/g, name)
+    );
+  }
+
+  console.log(
+    chalk.green(`Generated a component at ${generatedComponentPath}`)
+  );
 }
