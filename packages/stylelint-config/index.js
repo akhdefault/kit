@@ -1,1 +1,1 @@
-module.exports = require("./scss-modules");
+module.exports = require('./scss-modules');

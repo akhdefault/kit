@@ -1,3 +1,3 @@
-# Правила stylelint
+# Конфиг Stylelint
 
-Правила разделены на base, css-modules, scss и scss-modules (css-modules + scss). Последний вариант экспортируется по умолчанию.
+Правила разделены на base (включает eslint-config-standard), typescript, react, next и graphql. По умолчанию экспортируется конфиг, включающий в себя все эти наборы правил
