@@ -1,4 +1,4 @@
 module.exports = {
   root: true,
-  extends: ["@akh-test/eslint-config"],
+  extends: ['@akh-test/eslint-config'],
 };

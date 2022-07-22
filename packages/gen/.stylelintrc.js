@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ["@akh-test/stylelint-config"],
+  extends: ['@akh-test/stylelint-config'],
 };

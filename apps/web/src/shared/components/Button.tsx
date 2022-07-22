@@ -1,4 +1,4 @@
-import css from "./Button.module.scss";
+import css from './Button.module.scss';
 
 type ButtonProps = {};
 

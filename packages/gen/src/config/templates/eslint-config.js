@@ -1,3 +1,3 @@
 module.exports = {
-  extends: "@akh-test/eslint-config",
+  extends: '@akh-test/eslint-config',
 };
