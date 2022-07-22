@@ -1,8 +1,13 @@
 {
   "name": "@akh-test/stylelint-config",
-  "version": "0.0.0",
-  "main": "index.js",
-  "private": true,
+  "version": "0.0.1",
+  "exports": {
+    ".": "./index.js",
+    "./base": "./base.js",
+    "./css-modules": "./css-modules.js",
+    "./scss": "./scss.js",
+    "./scss-modules": "./scss-modules.js"
+  },
   "license": "MIT",
   "dependencies": {
     "stylelint-config-css-modules": "^4.1.0",
