@@ -5,6 +5,7 @@ module.exports = {
     './react',
     './next',
     './graphql',
+    './css-modules',
     'prettier',
   ],
 };
