@@ -1,6 +1,6 @@
 {
   "name": "@akh-test/gen",
-  "version": "0.0.9-beta15",
+  "version": "0.0.9-beta16",
   "bin": {
     "config": "./dist/config/index.js",
     "component": "./dist/component/index.js"
@@ -15,11 +15,12 @@
     "build": "tsup",
     "dev": "tsup --watch",
     "lint": "eslint src",
-    "format": "prettier --write \"**/*.{js,ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{js,ts,tsx}\""
   },
   "dependencies": {
     "chalk": "^4.1.2",
     "cpy": "^7.3.0",
+    "npm-add-script": "^1.1.0",
     "prompts": "^2.4.2"
   },
   "devDependencies": {
