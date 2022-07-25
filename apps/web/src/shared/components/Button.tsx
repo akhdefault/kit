@@ -6,7 +6,7 @@ type ButtonProps = {
 };
 
 const Button = ({ children }: ButtonProps) => {
-  return <div className={css.root}>{children}</div>;
+  return <button className={css.root}>{children}</button>;
 };
 
 export default Button;
