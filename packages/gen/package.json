@@ -11,7 +11,7 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
-    "lint": "eslint src --ignore-pattern 'src/templates/*'",
+    "lint": "eslint src --ignore-pattern 'src/**/templates/*'",
     "format": "prettier --write \"**/*.{js,ts,tsx}\"",
     "tsc": "npx tsc"
   },
