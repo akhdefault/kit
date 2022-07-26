@@ -3,7 +3,7 @@ import cpy from 'cpy';
 import path from 'path';
 import chalk from 'chalk';
 import fs from 'fs/promises';
-import toTitleCase from 'utils/toTitleCase';
+import toTitleCase from '../utils/toTitleCase';
 
 const questions: PromptObject[] = [
   {

@@ -1,12 +1,9 @@
 {
+  "extends": "tsconfig/base.json",
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules", "templates"],
   "compilerOptions": {
-    "baseUrl": "./src",
-    "target": "es2016",
-    "moduleResolution": "node",
-    "strict": true,
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "skipLibCheck": false
-  },
-  "exclude": ["templates", "dist"]
+    "target": "es5",
+    "noEmit": true
+  }
 }

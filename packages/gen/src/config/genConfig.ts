@@ -4,6 +4,7 @@ import util from 'util';
 import path from 'path';
 import defaultConfig, { Config } from './config';
 import cpy from 'cpy';
+// TODO: add types
 import npmAddScript from 'npm-add-script';
 
 const execAsync = util.promisify(exec);
