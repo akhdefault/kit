@@ -4291,6 +4291,11 @@ parse-json@^5.0.0:
     json-parse-even-better-errors "^2.3.0"
     lines-and-columns "^1.1.6"
 
+parse-options@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.npmjs.org/parse-options/-/parse-options-1.0.2.tgz#0f293ab106737da65796376a8713a2e8aea6998d"
+  integrity sha512-x1E8DVJ6gJ1WTAExbJJhLJInKLOMHhwV814fJ33uud9jfrKYwnnSI+aeNJ7ti8rIt/TEEG54qhQXYV68XQbtZg==
+
 pascalcase@^0.1.1:
   version "0.1.1"
   resolved "https://registry.npmjs.org/pascalcase/-/pascalcase-0.1.1.tgz#b363e55e8006ca6fe21784d2db22bd15d7917f14"

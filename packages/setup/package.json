@@ -1,6 +1,6 @@
 {
-  "name": "@akh-test/gen",
-  "version": "0.0.9-beta17",
+  "name": "@akh-test/setup",
+  "version": "0.0.1-beta6",
   "bin": "./dist/index.js",
   "publishConfig": {
     "access": "public"
@@ -11,7 +11,7 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
-    "lint": "eslint src --ignore-pattern 'src/templates/*'",
+    "lint": "eslint src",
     "format": "prettier --write \"**/*.{js,ts,tsx}\"",
     "tsc": "npx tsc"
   },
@@ -19,7 +19,6 @@
     "chalk": "^4.1.2",
     "cpy": "^7.3.0",
     "npm-add-script": "^1.1.0",
-    "parse-options": "^1.0.2",
     "prompts": "^2.4.2"
   },
   "devDependencies": {

@@ -1,10 +1,8 @@
-#!/usr/bin/env node
 import { exec } from 'child_process';
 import util from 'util';
 import path from 'path';
 import defaultConfig, { Config } from './config';
 import cpy from 'cpy';
-// TODO: add types
 // @ts-ignore
 import npmAddScript from 'npm-add-script';
 
@@ -17,6 +15,8 @@ export default async function genConfig(config = defaultConfig) {
     await addFiles(config.filesToAdd);
     await removeFiles(config.filesToRemove);
     await runScripts(config.scriptsToRun);
+    handleStyles();
+    await initStorybook();
   } catch (error) {
     console.error(error);
   }
@@ -47,6 +47,15 @@ async function removeFiles(files: Config['filesToRemove']) {
 
 async function addScripts(scripts: Config['scriptsToAdd']) {
   scripts.forEach(async script => {
+    // const { stderr } = await execAsync(
+    //   `npx npm-add-script -q -f -k ${script.key} -v ${script.value}`
+    // );
+    // if (stderr) {
+    //   console.error(stderr);
+    //   console.log(
+    //     'Make sure you are running the script from the root of your project'
+    //   );
+    // }
     npmAddScript({ key: script.key, value: script.value, force: true });
   });
 }
@@ -55,4 +64,14 @@ async function runScripts(scripts: Config['scriptsToRun']) {
   scripts.forEach(async script => {
     await execAsync(`yarn run ${script}`);
   });
+}
+
+async function handleStyles() {
+  await execAsync(`rm -rf styles && mkdir src/style`);
+  await cpy(path.join(__dirname, 'templates/vars.scss'), 'style');
+}
+
+async function initStorybook() {
+  await execAsync(`npx storybook init`);
+  console.log('done with storybook');
 }

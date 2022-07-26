@@ -6,7 +6,12 @@ type ButtonProps = {
 };
 
 const Button = ({ children }: ButtonProps) => {
-  return <button className={css.root}>{children}</button>;
+  return (
+    <button className={css.root}>
+      {children}
+      <svg></svg>
+    </button>
+  );
 };
 
 export default Button;

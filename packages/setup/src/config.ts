@@ -29,8 +29,10 @@ const config: Config = {
     { name: 'husky' },
     { name: 'prettier' },
     { name: 'graphql', prod: true },
+    { name: 'sass' },
     { name: 'next-plugin-graphql' },
     { name: '@next/bundle-analyzer' },
+    { name: 'storybook-addon-next' },
   ],
   filesToAdd: [
     { src: './templates/next.config.js', dest: './' },
@@ -38,6 +40,7 @@ const config: Config = {
     { src: './templates/.stylelintrc.js', dest: './' },
     { src: './templates/prettier.config.js', dest: './' },
     { src: './templates/.husky/pre-push', dest: './.husky' },
+    { src: './templates/.storybook/main.js', dest: './.storybook' },
   ],
   filesToRemove: ['./.eslintrc.json'],
   scriptsToAdd: [
