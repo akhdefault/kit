@@ -1,4 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npx tsc -p ./packages/tsconfig/base.json && yarn lint
+yarn tsc && yarn lint

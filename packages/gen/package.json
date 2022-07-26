@@ -15,7 +15,8 @@
     "build": "tsup",
     "dev": "tsup --watch",
     "lint": "eslint src",
-    "format": "prettier --write \"**/*.{js,ts,tsx}\""
+    "format": "prettier --write \"**/*.{js,ts,tsx}\"",
+    "tsc": "npx tsc"
   },
   "dependencies": {
     "chalk": "^4.1.2",
