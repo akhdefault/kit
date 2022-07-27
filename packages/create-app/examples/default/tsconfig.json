@@ -1,20 +1,20 @@
 {
   "compilerOptions": {
+    "baseUrl": "./src",
     "target": "es5",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "isolatedModules": true,
-    "esModuleInterop": true,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
-    "resolveJsonModule": true,
-    "jsx": "preserve",
-    "allowJs": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "incremental": true,
-    "baseUrl": "."
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true
   },
   "exclude": ["node_modules", ".next", "out", "storybook-static"],
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
