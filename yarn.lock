@@ -2051,6 +2051,11 @@ cpy@^7.3.0:
     globby "^9.2.0"
     nested-error-stacks "^2.1.0"
 
+create-next-app@^12.2.3:
+  version "12.2.3"
+  resolved "https://registry.npmjs.org/create-next-app/-/create-next-app-12.2.3.tgz#fbfa13bc03e2d80a716f721be39cba7430ae61c7"
+  integrity sha512-Hi1dIRDaGQoz5NN/gkG8Gz3VZdhU16a8x1kEG2S1ax4PYCb789yfgD9GTvAay0Nk7JRhtMsIVbGEk6As47CU3w==
+
 cross-spawn@^7.0.2, cross-spawn@^7.0.3:
   version "7.0.3"
   resolved "https://registry.npmjs.org/cross-spawn/-/cross-spawn-7.0.3.tgz#f73a85b9d5d41d045551c177e2882d4ac85728a6"
