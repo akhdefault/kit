@@ -1,5 +1,7 @@
 {
   "private": true,
+  "name": "default-starter",
+  "version": "0.0.0",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -22,7 +24,7 @@
   "devDependencies": {
     "@akh-test/eslint-config": "^0.0.5",
     "@akh-test/stylelint-config": "^0.0.2",
-    "@babel/core": "^7.16.7",
+    "@babel/core": "^7.18.9",
     "@next/bundle-analyzer": "^12.2.3",
     "@storybook/addon-actions": "^6.4.9",
     "@storybook/addon-essentials": "^6.4.9",
@@ -33,7 +35,7 @@
     "@types/node": "18.0.6",
     "@types/react": "18.0.15",
     "@types/react-dom": "18.0.6",
-    "babel-loader": "^8.2.3",
+    "babel-loader": "^8.2.5",
     "eslint": "8.20.0",
     "husky": "^8.0.1",
     "next-plugin-graphql": "^0.0.2",

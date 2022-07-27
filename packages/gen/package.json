@@ -1,6 +1,6 @@
 {
   "name": "@akh-test/gen",
-  "version": "0.0.9-beta17",
+  "version": "0.0.9-beta18",
   "bin": "./dist/index.js",
   "publishConfig": {
     "access": "public"
