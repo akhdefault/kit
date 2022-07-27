@@ -4,6 +4,7 @@
   "exclude": ["node_modules", "templates"],
   "compilerOptions": {
     "target": "es5",
-    "noEmit": true
+    "noEmit": true,
+    "jsx": "preserve"
   }
 }
