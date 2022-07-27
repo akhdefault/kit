@@ -13,7 +13,6 @@ import path from 'path';
   ]);
   console.log(path.join(__dirname, './examples/default'));
 
-  child.stdin.setEncoding('utf-8');
   child.stdout.pipe(process.stdout);
   process.stdin.pipe(child.stdin);
   child.stderr.on('data', data => {
