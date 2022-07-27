@@ -1,5 +1,17 @@
 @import 'style/vars';
 
 .root {
-  //
+  align-items: center;
+  display: flex;
+  gap: 7px;
+  padding: 20px;
+}
+
+.title {
+  font-size: 26px;
+}
+
+.heart {
+  height: 35px;
+  width: 40px;
 }

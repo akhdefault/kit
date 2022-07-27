@@ -1,12 +1,27 @@
 module.exports = {
-  stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
+  stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "storybook-addon-next",
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    'storybook-addon-next',
   ],
-  framework: "@storybook/react",
+  framework: '@storybook/react',
   core: {
-    builder: "webpack5",
+    builder: 'webpack5',
+  },
+  webpackFinal: async config => {
+    // this modifies the existing image rule to exclude .svg files
+    // since we want to handle those files with @svgr/webpack
+    const imageRule = config.module.rules.find(rule => rule.test.test('.svg'));
+    imageRule.exclude = /\.svg$/;
+
+    // configure .svg files to be loaded with @svgr/webpack
+    config.module.rules.push({
+      test: /\.svg$/,
+      issuer: /\.tsx$/,
+      use: ['@svgr/webpack'],
+    });
+
+    return config;
   },
 };

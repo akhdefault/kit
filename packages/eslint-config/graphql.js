@@ -8,8 +8,13 @@ module.exports = {
       rules: {
         '@graphql-eslint/alphabetize': [
           'error',
-          { selections: ['OperationDefinition', 'FragmentDefinition'] },
+          {
+            selections: ['OperationDefinition', 'FragmentDefinition'],
+            variables: ['OperationDefinition'],
+            arguments: ['Field', 'Directive'],
+          },
         ],
+        'spaced-comment': 'off',
       },
     },
   ],
