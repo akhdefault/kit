@@ -4,4 +4,5 @@ module.exports = {
     'no-console': 'warn',
     'import/newline-after-import': 'warn',
   },
+  root: true,
 };
