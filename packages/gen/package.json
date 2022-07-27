@@ -13,7 +13,7 @@
     "dev": "tsup --watch",
     "lint": "eslint src --ignore-pattern 'src/**/templates/*'",
     "format": "prettier --write \"**/*.{js,ts,tsx}\"",
-    "tsc": "npx tsc"
+    "typecheck": "npx tsc"
   },
   "dependencies": {
     "chalk": "^4.1.2",

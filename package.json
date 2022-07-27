@@ -14,7 +14,7 @@
     "lint:fix": "turbo run lint:fix",
     "format": "prettier --write \"**/*.{js,ts,tsx,md}\"",
     "prepare": "husky install",
-    "tsc": "turbo run tsc"
+    "typecheck": "turbo run typecheck"
   },
   "devDependencies": {
     "@akh-test/eslint-config": "*",

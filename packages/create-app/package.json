@@ -11,9 +11,9 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
-    "lint": "eslint src",
+    "lint": "eslint index.ts",
     "format": "prettier --write \"**/*.{js,ts,tsx}\"",
-    "tsc": "npx tsc"
+    "typecheck": "npx tsc"
   },
   "dependencies": {
     "create-next-app": "^12.2.3"
