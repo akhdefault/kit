@@ -1,4 +1,5 @@
-module.exports = {
+/** @type {import('stylelint').Config} */
+const config = {
   extends: ['./scss', './css-modules'],
   rules: {
     // camelCase
@@ -6,3 +7,5 @@ module.exports = {
     'scss/dollar-variable-pattern': '^[a-z][a-zA-Z0-9]+$',
   },
 };
+
+module.exports = config;

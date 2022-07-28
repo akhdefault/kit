@@ -1,4 +1,5 @@
-module.exports = {
+/** @type {import('stylelint').Config} */
+const config = {
   extends: ['stylelint-config-standard', 'stylelint-config-prettier'],
   plugins: ['stylelint-order'],
   rules: {
@@ -31,3 +32,5 @@ module.exports = {
     'color-named': 'always-where-possible',
   },
 };
+
+module.exports = config;

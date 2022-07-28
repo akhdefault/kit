@@ -1,4 +1,5 @@
-module.exports = {
+/** @type {import('eslint').Linter.Config} */
+const config = {
   extends: [
     './base',
     './typescript',
@@ -9,3 +10,5 @@ module.exports = {
     'prettier',
   ],
 };
+
+module.exports = config;

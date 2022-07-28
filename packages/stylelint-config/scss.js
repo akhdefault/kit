@@ -1,4 +1,5 @@
-module.exports = {
+/** @type {import('stylelint').Config} */
+const config = {
   extends: ['stylelint-config-standard-scss', './base'],
   plugins: ['stylelint-scss'],
   rules: {
@@ -9,3 +10,5 @@ module.exports = {
     'scss/double-slash-comment-empty-line-before': null,
   },
 };
+
+module.exports = config;

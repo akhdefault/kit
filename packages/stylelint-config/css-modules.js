@@ -1,4 +1,5 @@
-module.exports = {
+/** @type {import('stylelint').Config} */
+const config = {
   extends: ['stylelint-config-css-modules', './base'],
   rules: {
     /* 
@@ -10,3 +11,5 @@ module.exports = {
     'keyframes-name-pattern': '^[a-z][a-zA-Z0-9]+$',
   },
 };
+
+module.exports = config;

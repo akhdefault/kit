@@ -1,4 +1,5 @@
-module.exports = {
+/** @type {import('eslint').Linter.Config} */
+const config = {
   extends: ['react-app'],
   rules: {
     'react-hooks/rules-of-hooks': 'error',
@@ -20,3 +21,5 @@ module.exports = {
     useJSXTextNode: true,
   },
 };
+
+module.exports = config;

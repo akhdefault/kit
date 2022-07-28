@@ -1,4 +1,5 @@
-module.exports = {
+/** @type {import('eslint').Linter.Config} */
+const config = {
   ignorePatterns: ['**/generated/*.ts', '**/generated/*.tsx'],
   overrides: [
     {
@@ -19,3 +20,5 @@ module.exports = {
     },
   ],
 };
+
+module.exports = config;
